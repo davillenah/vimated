@@ -1,0 +1,29 @@
+#header {
+    height: 100vh;
+    background: black;
+    background-image: url(https://wallpaperset.com/w/full/0/5/b/476362.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+.header_name {
+    margin: 0 auto;
+    width: max-content;
+}
+.im {
+    position: absolute;
+    left: 0;
+    @include mq-xs {
+        font-size: 1.3em;
+    }
+    &_my-name {
+        font-family: "Montserrat Subrayada", sans-serif;
+        @include mq-xs {
+            font-size: 1.5em;
+        }
+        @include moving-background-letters(
+            "https://image.freepik.com/vector-gratis/banner-3d-metalico-rojo-oscuro-abstracto-moderno_105555-76.jpg"
+        );
+    }
+}

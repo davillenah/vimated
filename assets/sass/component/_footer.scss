@@ -1,0 +1,39 @@
+#footer {
+    @include mq-xs {
+        padding-right: 3rem;
+    }
+}
+.footer_social-networks {
+    li {
+        line-height: 50px;
+        @include mq-phone-only {
+            &:nth-child(1) a,
+            &:nth-child(2) a,
+            &:nth-child(3) a {
+                padding-bottom: 0.75rem;
+            }
+            &:nth-child(4) {
+                padding-left: 4rem;
+                a {
+                    padding-top: 0.75rem;
+                }
+            }
+            &:nth-child(5) {
+                padding-right: 4rem;
+                a {
+                    padding-top: 0.75rem;
+                }
+            }
+        }
+        a {
+            outline: 1px solid black;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.15em;
+
+            @include mq-xs {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

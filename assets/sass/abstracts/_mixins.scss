@@ -1,0 +1,52 @@
+/**
+    *   MIXINS FOR MEDIA QUERIES
+    */
+@mixin mq-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin mq-xs {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+@mixin mq-sm {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+@mixin mq-md {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin mq-lg {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+/**
+    *   MIXINS FOR RESET
+    */
+@mixin p0 {
+    padding: 0;
+}
+@mixin m0 {
+    margin: 0;
+}
+/**
+    *   MIXINS FOR POSITIONING
+    */
+/**
+    *   @param width size.
+    */
+@mixin center-and-middle--table($param: auto) {
+    display: table;
+    margin: 0 auto;
+    width: $param;
+    & > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

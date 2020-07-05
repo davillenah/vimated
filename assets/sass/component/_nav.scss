@@ -1,0 +1,42 @@
+@mixin hover-1($line-height) {
+    border: 1px solid transparent;
+    border-radius: 20%;
+    transition: all 0.5s;
+    line-height: $line-height;
+    &:hover,
+    &:focus {
+        border-top-color: orangered;
+        border-bottom-color: orangered;
+        line-height: $line-height * 2;
+    }
+}
+
+#bar {
+    text-transform: uppercase;
+    @include mq-xs {
+        & ul {
+            height: 50px;
+            li {
+                line-height: normal;
+            }
+        }
+    }
+}
+.bar {
+    &_icon {
+        padding-right: 1.5rem;
+        font-size: 2em;
+        line-height: 3em;
+        color: whitesmoke;
+        text-align: right;
+        @include mq-xs {
+            display: none;
+        }
+    }
+    &_menu {
+        height: 250px;
+        li {
+            @include hover-1(25px);
+        }
+    }
+}

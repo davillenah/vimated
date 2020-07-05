@@ -1,0 +1,55 @@
+/**
+    *   RESET FOR MAIN CONTAINERS
+    */
+body {
+    font-size: 0.75em;
+    background-color: black;
+}
+footer {
+    font-size: 1.3em;
+}
+/**
+    *   RESET FOR ALL ELEMENT
+    */
+* {
+    max-width: 100%;
+}
+/**
+    *   RESET FOR FBG CSS
+    */
+.container {
+    padding: 0 5px;
+}
+.row,
+.row.reverse,
+.col,
+.col.reverse,
+[class*="col-"] {
+    margin: 0;
+    padding: 0;
+}
+/**
+    *   RESET FOR ALL LINK
+    */
+a {
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+    width: 100%;
+    &:link,
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+        color: inherit;
+    }
+}
+/**
+    *   RESET FOR ALL LIST
+    */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}

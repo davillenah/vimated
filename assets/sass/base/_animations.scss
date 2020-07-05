@@ -1,0 +1,48 @@
+@keyframes background-image-movement {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@mixin moving-background-letters($image) {
+    /**
+        *   CONTAINER
+
+    0% {
+        background-position: 0% 25%;
+    }
+    25% {
+        background-position: 25% 50%;
+    }
+    50% {
+        background-position: 50% 75%;
+    }
+    75% {
+        background-position: 75% 100%;
+    }
+
+
+
+        */
+    display: block;
+    color: transparent;
+    /**
+        *   BACKGROUND IMAGE
+        */
+    background-image: url(#{$image});
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: content;
+    background-clip: text;
+    /**
+        *   ANIMATE BACKGROUND IMAGE
+        */
+    animation: background-image-movement 100s ease infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
